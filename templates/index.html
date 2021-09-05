@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Classifier</title>
+</head>
+<style>
+      body {
+        background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+    </style>
+
+<body>
+
+<form action="{{url_for('predict')}}" METHOD="post">
+    <center><style>
+input[type=text] {
+  width: 20%;
+  box-sizing: border-box;
+  border: 0.2px solid #ccc;
+  border-radius: 2px;
+  font-size: 16px;
+  background-color: transparent;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding: 10px 18px 10px 38px;
+}
+</style></center>
+<body>
+
+<center>
+     <h1 style=""> Basic Classifier</h1>
+     <input type ="text" name='min1' placeholder="What is min?" required="required"><br><br>
+     <input type ="text" name='log10_Var100_10' placeholder="What is log variance?" required="required"><br><br>
+     <input type ="text" name='Dis_max' placeholder="What is Dis_max?" required="required"><br><br>
+     <input type ="text" name='Slope' placeholder="What is Slope?" required="required"><br><br>
+     <input type ="text" name='charge_tym' placeholder="What is charge time?" required="required"><br><br>
+     <input type ="text" name='intercept' placeholder="What is Intercept?" required="required"><br><br>
+     <input type ="text" name='Integration' placeholder="What is Integration?" required="required"><br><br>
+     <input type="text" name='IR_min' placeholder="What is IR_min? " required="required"><br><br>
+     <input type ="text" name='IR_diff' placeholder="What is IR_diff?" required="required"><br><br>
+    <br><br><button id="sub" type="submit">Calculate the Cycle</button>
+     <br>
+    <center><h3 style="color:Dodgerblack";>Predicted Result</h3> <h1 style="color:DodgerBlue";>{{prediction_text}}</h1></center>
+</center>
+</form>
+</body>
+</html>
